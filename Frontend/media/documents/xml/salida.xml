@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<lista_respuestas>
+  <respuesta>
+    <fecha>01/04/2022</fecha>
+    <mensajes>
+      <total>3</total>
+      <positivos>1</positivos>
+      <negativos>1</negativos>
+      <neutros>1</neutros>
+    </mensajes>
+    <analisis>
+      <empresa name="usac">
+        <mensajes>
+          <total>3</total>
+          <positivos>1</positivos>
+          <negativos>1</negativos>
+          <neutros>1</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="inscripcion">
+            <mensajes>
+              <total>3</total>
+              <positivos>1</positivos>
+              <negativos>1</negativos>
+              <neutros>1</neutros>
+            </mensajes>
+          </servicio>
+          <servicio name="asignacion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+          <servicio name="graduacion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="irtra">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="inscripcion">
+            <mensajes>
+              <total>3</total>
+              <positivos>1</positivos>
+              <negativos>1</negativos>
+              <neutros>1</neutros>
+            </mensajes>
+          </servicio>
+          <servicio name="asignacion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+          <servicio name="graduacion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+    </analisis>
+  </respuesta>
+</lista_respuestas>
