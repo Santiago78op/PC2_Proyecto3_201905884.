@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Halo Processor</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/>
+
+    <!-- Styles -->
+    <link href="{% static 'ProyectoWebApp/css/style.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Head -->
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-lower">Proyecto III</span>
+    </h1>
+
+    <!-- Navbar -->
+    <div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Proyecto III</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %} ">
+              <a id="len1" class="nav-link" href="{% url 'Home' %}">Inicio</a>
+            </li>
+            <li class="nav-item {% if request.path == '/archivo/' %}active{% endif %}">
+              <a id="len2" class="nav-link" href="{% url 'Archivo' %}">Cargar Archivo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="len3" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Peticiones
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Consultar Datos</a></li>
+                <li><a class="dropdown-item" href="#">Clasificación por fecha</a></li>
+                <li><a class="dropdown-item" href="#">Rango de fechas</a></li>
+                <li><a class="dropdown-item" href="#">Reporte en PDF</a></li>
+                <li><a class="dropdown-item" href="#">Prueba de mensaje</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="len4" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ayuda
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Información del estudiante</a></li>
+                <li><a class="dropdown-item" href="#">Documentación del programa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+
+    <!-- body  -->
+    <!-- contenido cambiante -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	      </p>
+          <p class="m-0 mbt">
+            <a href="https://policies.google.com/privacy?hl=es" class="link">Política de privacidad</a> ·
+            <a href="https://www.iebschool.com/blog/como-redactar-aviso-legal-e-commerce/" class="link">Aviso legal</a> ·
+            <a href="https://www.wipo.int/about-ip/es/" class="link">Propiedad Intelectual</a>
+          </p>
+        <p class="m-0 mbt1">&copy; Santiago Julián Barrera Reyes</p>
+      </div>
+	  </footer>
+    
+    <!-- Bootstrap -->
+    <script src="{% static 'ProyectoWebApp/js/funtion.js' %}"></script>
+    <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
