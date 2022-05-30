@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+    <section class="page-section cta">
+        <div class="contenedorFormulario">
+            <h1 style="width: 70%; margin: auto; margin-top: 10px; margin-bottom: 10px;">{{ respuesta }}</h1>
+            <p class="m-0 mbt" style="font-size:x-large;">
+                <a href="{% url 'Home' %}" class="link">Procesar Archivo</a>
+            </p>
+        </div>
+    </section>
+{% endblock %} 

@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<lista_respuestas>
+  <respuesta>
+    <fecha>24/04/2022</fecha>
+    <mensajes>
+      <total>1</total>
+      <positivos>1</positivos>
+      <negativos>0</negativos>
+      <neutros>0</neutros>
+    </mensajes>
+    <analisis>
+      <empresa name="mcdonals">
+        <mensajes>
+          <total>1</total>
+          <positivos>1</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="servicio">
+            <mensajes>
+              <total>1</total>
+              <positivos>1</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="burguer  king">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="cobrar">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="carls jr">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="atencion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+    </analisis>
+  </respuesta>
+  <respuesta>
+    <fecha>26/04/2022</fecha>
+    <mensajes>
+      <total>1</total>
+      <positivos>1</positivos>
+      <negativos>0</negativos>
+      <neutros>0</neutros>
+    </mensajes>
+    <analisis>
+      <empresa name="mcdonals">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="servicio">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="burguer  king">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="cobrar">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="carls jr">
+        <mensajes>
+          <total>1</total>
+          <positivos>1</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="atencion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+    </analisis>
+  </respuesta>
+  <respuesta>
+    <fecha>01/04/2022</fecha>
+    <mensajes>
+      <total>2</total>
+      <positivos>0</positivos>
+      <negativos>1</negativos>
+      <neutros>1</neutros>
+    </mensajes>
+    <analisis>
+      <empresa name="mcdonals">
+        <mensajes>
+          <total>1</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>1</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="servicio">
+            <mensajes>
+              <total>2</total>
+              <positivos>0</positivos>
+              <negativos>1</negativos>
+              <neutros>1</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="burguer  king">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="cobrar">
+            <mensajes>
+              <total>1</total>
+              <positivos>0</positivos>
+              <negativos>1</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+      <empresa name="carls jr">
+        <mensajes>
+          <total>0</total>
+          <positivos>0</positivos>
+          <negativos>0</negativos>
+          <neutros>0</neutros>
+        </mensajes>
+        <servicios>
+          <servicio name="atencion">
+            <mensajes>
+              <total>0</total>
+              <positivos>0</positivos>
+              <negativos>0</negativos>
+              <neutros>0</neutros>
+            </mensajes>
+          </servicio>
+        </servicios>
+      </empresa>
+    </analisis>
+  </respuesta>
+</lista_respuestas>

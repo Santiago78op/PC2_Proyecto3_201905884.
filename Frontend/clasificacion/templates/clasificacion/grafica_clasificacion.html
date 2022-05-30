@@ -1,0 +1,127 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <script src="{% static 'home/Highcharts/code/highcharts.js' %}"></script>
+  <script src="{% static 'home/Highcharts/code/modules/exporting.js' %}"></script>
+  <script src="{% static 'home/Highcharts/code/modules/export-data.js' %}"></script>
+  <script src="{% static 'home/Highcharts/code/modules/accessibility.js' %}"></script>
+  <section class="page-section cta">
+    <div class="contenedor_fecha">
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+    </figure>
+    <br>
+    <br>
+    <figure class="highcharts-figure">
+      <div id="container_2"></div>
+    </figure>
+    </div>
+  </section>
+    <div class="col-md-12 text-center" style="padding-bottom: 150px;">
+            <a type="submit" href="{%url 'Clasificacion' %}"  class="btn btn-danger" style="width: 300px;">Regresar</a>
+    </div>
+  <script type="application/javascript">
+    Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Fecha: {{ fecha|safe }}'
+    },
+    subtitle: {
+        text: 'Clasificación Fecha'
+    },
+    xAxis: {
+        categories: [
+            '{{ fecha|safe }}'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Punteo (Unidad)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} points</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Mgs Positivos',
+        data: JSON.parse("{{dates_mgs.positivos_date|safe }}")
+
+    }, {
+        name: 'Mgs Negativos',
+        data: JSON.parse("{{ dates_mgs.negativos_date|safe }}")
+
+    }, {
+        name: 'Mgs Neutro',
+        data: JSON.parse("{{ dates_mgs.neutros_date|safe }}")
+
+    }]
+    });
+
+    Highcharts.chart('container_2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Clasificación por Empresas en Fecha: {{ fecha|safe }}'
+    },
+    subtitle: {
+        text: 'Clasificación por Empresa'
+    },
+    xAxis: {
+        categories: JSON.parse('{{ emp_mgs.emps|safe }}'),
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Punteo (Unidad)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} points</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Mgs Positivos',
+        data: JSON.parse("{{ emp_mgs.positivos_emp|safe }}")
+
+    }, {
+        name: 'Mgs Negativos',
+        data: JSON.parse("{{ emp_mgs.negativos_emp|safe }}")
+
+    }, {
+        name: 'Mgs Neutro',
+        data: JSON.parse("{{ emp_mgs.neutros_emp|safe }}")
+
+    }]
+    });
+  </script>
+{% endblock %} 

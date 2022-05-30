@@ -1,0 +1,37 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <section class="page-section cta">
+    <div class="contenedor_home">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h1 class="titulo">Seleccionar Fecha</h1>
+        <div style="margin-bottom: 1.5rem;">
+          <select class="form-select" name="fecha_cls" id="fecha_cls" aria-label="Default select example">
+                <option selected>Fecha</option>
+                {% for doc in datos.newDiccionario %}
+                    <option value="{{ doc.fecha }}">{{ doc.fecha }}</option>
+                {% endfor %}
+          </select>
+        </div>
+        <h1 class="titulo">Seleccionar Empresa</h1>
+        <div style="margin-bottom: 1.5rem;">
+          <select class="form-select" name="empresa_cls" id="empresa_cls" aria-label="Default select example">
+                <option selected>Empresa</option>
+                {% for doc in datos.diccionario.empresas %}
+                    <option value="{{ doc.empresa }}">{{ doc.empresa }}</option>
+                {% endfor %}
+                <option value="empresas">Todas las Empresas</option>
+          </select>
+        </div>
+        <div>
+          <button  name="clasificar" id="clasificar" class="btn btn-success" style="width: 200px;">Graficar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %} 
+

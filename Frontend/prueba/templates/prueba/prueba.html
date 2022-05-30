@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <section class="page-section clearfix">
+    <div class="container">
+      <form action="" method="POST" class="row g-3">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label class="Word" for="exampleFormControlTextarea1" id="word">Entrada</label>
+          <textarea class="form-control"  id="Textarea1" name="Textarea1" rows="16"></textarea>
+        </div>
+        <div class="col-md-6">
+          <label class="Word" for="exampleFormControlTextarea2" id="word">Salida</label>
+          <textarea class="form-control" readonly="readonly" id="Textarea2" name="Textarea2" rows="16">{{data}}</textarea>
+        </div>
+        <div class="col-md-12">
+          <button name="probar" id="probar"  class="btn btn-info" style="width: 200px;">Probar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %} 

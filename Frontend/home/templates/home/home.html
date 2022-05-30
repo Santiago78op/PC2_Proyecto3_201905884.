@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <section class="page-section clearfix">
+    <div class="contenedor_home">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h1 class="titulo">Procesar Archivo</h1>
+        <div style="margin-bottom: 1.5rem;">
+          <select class="form-select" name="archivo" id="archivo" aria-label="Default select example">
+                <option selected>Files</option>
+                {% for file in documentos %}
+                <option value="{{ file.titulo }}">{{ file.titulo }}</option>
+                {% endfor %}
+          </select>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label class="Word" for="exampleFormControlTextarea1" id="word">Entrada</label>
+          <textarea class="form-control"  readonly="readonly" id="Textarea1" name="Textarea1" rows="16">{{result}}</textarea>
+        </div>
+        <div>
+          <button  name="send" id="send" class="btn btn-success" style="width: 200px;">Enviar</button>
+          <button  name="reset" id="reset" class="btn btn-danger" style="width: 200px;">Reinicio</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %} 

@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <section class="page-section cta">
+    <div class="contenedor_home">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h1 class="titulo">Generar PDF</h1>
+        <div style="margin-bottom: 1.5rem;">
+          <select class="form-select" name="archivo" id="archivo" aria-label="Default select example">
+                <option selected>Files</option>
+                {% for file in documentos %}
+                  <option value="{{ file.titulo }}">{{ file.titulo }}</option>
+                {% endfor %}
+          </select>
+        </div>
+        <div>
+          <button  name="pdfs" id="pdfs" class="btn btn-success" style="width: 200px;">Generar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %} 

@@ -1,0 +1,41 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Logistica -->
+  <section class="page-section cta">
+    <div class="contenedor_home">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h1 class="titulo">Seleccionar Fecha</h1>
+        <div style="margin-bottom: 1.5rem;">
+        <div class="contenedorCheck">
+        {% for doc in datos.newDiccionario %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="checks" value="{{ doc.fecha }}" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              {{ doc.fecha }}
+            </label>
+          </div>
+        {% endfor %}
+        </div>
+        </div>
+        <h1 class="titulo">Seleccionar Empresa</h1>
+        <div style="margin-bottom: 1.5rem;">
+          <select class="form-select" name="empresa_cls" id="empresa_cls" aria-label="Default select example">
+                <option selected>Empresa</option>
+                {% for doc in datos.diccionario.empresas %}
+                    <option value="{{ doc.empresa }}">{{ doc.empresa }}</option>
+                {% endfor %}
+                <option value="empresas">Todas las Empresas</option>
+          </select>
+        </div>
+        <div>
+          <button  name="graficar" id="graficar" class="btn btn-success" style="width: 200px;">Graficar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %} 
+
